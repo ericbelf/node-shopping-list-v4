@@ -122,7 +122,7 @@ app.put('/recipes/:id', jsonParser, (req, res) => {
     return res.status(400).send(message);
   }
   console.log(`Updating recipe item \`${req.params.id}\``);
-  ShoppingList.update({
+  Recipes.update({
     id: req.params.id,
     name: req.body.name,
     ingredients: req.body.ingredients
